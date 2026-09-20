@@ -1,2 +1,12 @@
 <Solution>
+  <Folder Name="/Services/" />
+  <Folder Name="/Services/Catalog/">
+    <Project Path="Services/Catalog/Catalog.Infrastructure/Catalog.Infrastructure.csproj" Id="9277c0cb-7d46-4f16-997e-7115623eab2b" />
+    <Project Path="Services/Catalog/Catalog.Api/Catalog.Api.csproj" Id="d4e48751-0cea-49cc-9db5-af6fcfcbbf6e" />
+    <Project Path="Services/Catalog/Catalog.Application/Catalog.Application.csproj" Id="62fd7115-160d-468e-a4d6-7d5a0578585a" />
+    <Project Path="Services/Catalog/Catalog.Core/Catalog.Core.csproj" Id="8c98b9a4-5924-485f-a098-5eae17842d48" />
+  </Folder>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
 </Solution>
