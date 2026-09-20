@@ -1,0 +1,21 @@
+services:
+  catalogdb:
+    container_name: catalogdb
+    restart: always
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo_data:/data/db
+  
+  catalog:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "MongoDBSettings__ConnectionString=mongodb://catalogdb:27017"
+      - "MongoDBSettings__DatabaseName=CatalogDb"
+      - "MongoDBSettings__ProductCollectionName=Products"
+      - "MongoDBSettings__BrandCollectionName=Brands"
+      - "MongoDBSettings__TypeCollectionName=Types" 
+    depends_on:
+      - catalogdb          
+    ports:
+      - "8000:8080"
